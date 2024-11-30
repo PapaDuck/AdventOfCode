@@ -90,21 +90,16 @@ def main():
     year = int(input("Gib das Jahr ein (2015-2021): "))
     day = int(input("Gib den Tag ein (1-25): "))
 
-    for yyy in range(2016,2024):
-        for ddd in range(1,26):
-
-            year = yyy
-            day = ddd
-            try:
-                print(f"Lade Aufgabe für Jahr {year}, Tag {day}...")
-                content = fetch_puzzle(year, day)
-                print(f"Lade Eingabedatei für Jahr {year}, Tag {day}...")
-                input_data = fetch_input(year, day)
-                create_structure(year, day, content, input_data)
-                print(f"Aufgabe, Eingabedatei und main.py erfolgreich erstellt unter {year}/day{day}")
-            except Exception as e:
-                print(f"Fehler: {e}")
-            print('\n')
+    try:
+        print(f"Lade Aufgabe für Jahr {year}, Tag {day}...")
+        content = fetch_puzzle(year, day)
+        print(f"Lade Eingabedatei für Jahr {year}, Tag {day}...")
+        input_data = fetch_input(year, day)
+        create_structure(year, day, content, input_data)
+        print(f"Aufgabe, Eingabedatei und main.py erfolgreich erstellt unter {year}/day{day}")
+    except Exception as e:
+        print(f"Fehler: {e}")
+    print('\n')
                 
 
 if __name__ == "__main__":

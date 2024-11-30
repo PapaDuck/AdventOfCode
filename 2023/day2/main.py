@@ -1,9 +1,9 @@
-"""Day 2: Cube Conundrum?!"""
+def day2():
+    """Tag 2 des Jahres 2023"""
+    print("Lösung für Tag 2 des Jahres 2023 hier implementieren.")
 
-FILE = "example.txt"
-# FILE = 'input.txt
+def main():
+    day2()
 
-with open(FILE, encoding="utf-8") as f:
-    data = f.read()
-
-print(data)
+if __name__ == "__main__":
+    main()

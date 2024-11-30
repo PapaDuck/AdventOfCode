@@ -1,9 +1,9 @@
-"""Day 1: Trebuchet?!"""
+def day1():
+    """Tag 1 des Jahres 2023"""
+    print("Lösung für Tag 1 des Jahres 2023 hier implementieren.")
 
-FILE = "example.txt"
-# FILE = 'input.txt
+def main():
+    day1()
 
-with open(FILE, encoding="utf-8") as f:
-    data = f.read()
-
-print(data)
+if __name__ == "__main__":
+    main()

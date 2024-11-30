@@ -1,9 +1,9 @@
-"""Day 3: Gear Ratios"""
+def day3():
+    """Tag 3 des Jahres 2023"""
+    print("Lösung für Tag 3 des Jahres 2023 hier implementieren.")
 
-FILE = "example.txt"
-# FILE = 'input.txt
+def main():
+    day3()
 
-with open(FILE, encoding="utf-8") as f:
-    data = f.read()
-
-print(data)
+if __name__ == "__main__":
+    main()

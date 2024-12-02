@@ -22,49 +22,41 @@ def day2():
         level = [ int(x) for x in level ]
         
         errors = 0
-        safe = False
+        safe = True
         
+        #for i in len(level):
+
+
         differences = [j-i for i, j in zip(level[:-1], level[1:])]
 
+        # Auf oder Absteigend
         pos = [i for i in differences if i > 0]
         neg = [i for i in differences if i < 0]
-        if len(pos) == 0 or len(neg) == 0:
-            safe = True
+        if len(pos) != 0 and len(neg) != 0:
+            safe = False
+            print('pos or neg')
         
+        # In Range
         for dif in differences:
             if dif < 0:
                 dif = dif*-1
-            if dif >= min_difference and dif <= max_difference:
-                safe = True
-            else:
+            if dif < min_difference or dif > max_difference:
                 safe = False
                 print(f'{dif} | {min_difference}-{max_difference}')
                 break
         
+        # Reihenfolge
+        for i, lev in enumerate(level):
+            if i > 0:
+                if (level[i] > level[i-1] and len(neg) != 0):
+                    safe = False
+                    print(f'{lev} F | {level[i]} != {level[i-1]}')
+                if (level[i] < level[i-1] and len(pos) != 0):
+                    safe = False
+                    print(f'{lev} F | {level[i]} != {level[i-1]}')
         print(level, safe)
         report_list.append(safe)
-
-        continue
-        # Test Difference
-        for i in dif:
-                if dif < 0:
-                    dif = dif*-1
-                
-                # Test if Tolarance
-                if dif < min_difference or dif > max_difference:
-                    errors += 1
-                    print(f'Error {dif} zwischen {min_difference}-{max_difference}')
-
-       
-
-        if errors <= tolarate_lvl and safe:
-            report_list.append('safe')
-            print(f'safe: {report} | {errors}')
-        else:
-            report_list.append('unsafe')
-            print(f'unsafe: {report} | {errors}')
-
-    print('----------- ',report_list.count(True))
+    print('----------=== ',report_list.count(True))
     return
 
 

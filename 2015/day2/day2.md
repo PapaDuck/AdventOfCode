@@ -1,6 +1,5 @@
 --- Day 2: ** I Was Told There Would Be No Math ---
-The elves are running low on wrapping paper, and so they need to submit an order for more.**  They have a list of the dimensions (length
-l
+The elves are running low on wrapping paper, and so they need to submit an order for more.** They have a list of the dimensions (length l
 , width
 w
 , and height
@@ -10,7 +9,7 @@ Fortunately, every present is a box (a perfect
 right rectangular prism
 ), which makes calculating the required wrapping paper for each gift a little easier: ** find the surface area of the box, which is
 2*l*w + 2*w*h + 2*h*l
-.**  The elves also need a little extra paper for each present: ** the area of the smallest side.**
+.** The elves also need a little extra paper for each present: ** the area of the smallest side.**
 For example: **
 A present with dimensions
 2x3x4
@@ -20,7 +19,7 @@ square feet of wrapping paper plus
 6
 square feet of slack, for a total of
 58
-square feet.**
+square feet.\*\*
 A present with dimensions
 1x1x10
 requires
@@ -32,6 +31,6 @@ square foot of slack, for a total of
 square feet.**
 All numbers in the elves' list are in
 feet
-.**  How many total
+.** How many total
 square feet of wrapping paper
 should they order?

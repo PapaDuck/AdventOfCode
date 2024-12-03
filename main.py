@@ -77,7 +77,15 @@ def create_structure(year, day, content, input_data):
         f.write(f"""\
 def day{day}():
     \"\"\"Tag {day} des Jahres {year}\"\"\"
-    print("Lösung für Tag {day} des Jahres {year} hier implementieren.")
+    data = load_data(test_file=False)  # Setze test_file=True, um input_test.txt zu laden
+    print(data)
+
+def load_data(test_file=False):
+    \"\"\"Lädt die Daten aus der Datei input.txt oder input_test.txt.\"\"\"
+    filename = "input_test.txt" if test_file else "input.txt"
+    with open(filename) as input_file:
+        data = input_file.read()
+    return data.splitlines()
 
 def main():
     day{day}()

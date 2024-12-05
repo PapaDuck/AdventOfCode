@@ -75,17 +75,17 @@ def create_structure(year, day, content, input_data):
     main_file_path = os.path.join(folder_path, "main.py")
     with open(main_file_path, "w", encoding="utf-8") as f:
         f.write(f"""\
-def day{day}():
-    \"\"\"Tag {day} des Jahres {year}\"\"\"
-    data = load_data(test_file=False)  # Setze test_file=True, um input_test.txt zu laden
-    print(data)
-
 def load_data(test_file=False):
-    \"\"\"Lädt die Daten aus der Datei input.txt oder input_test.txt.\"\"\"
     filename = "input_test.txt" if test_file else "input.txt"
     with open(filename) as input_file:
         data = input_file.read()
     return data.splitlines()
+
+def day{day}():
+    testing = False
+    data = load_data(testing)
+    print(data)
+
 
 def main():
     day{day}()

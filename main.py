@@ -9,7 +9,7 @@ SESSION_COOKIE = os.getenv("SESSION_COOKIE")
 
 if not SESSION_COOKIE:
     raise Exception("SESSION_COOKIE ist nicht gesetzt. Bitte füge es zur .env-Datei hinzu.")
-
+    
 BASE_URL = "https://adventofcode.com"
 
 def fetch_puzzle(year, day):

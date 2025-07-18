@@ -28,21 +28,21 @@ gyxo (61)
 cntj (57)
 .**.**.**then you would be able to recreate the structure of the towers that looks like this: **
 gyxo
-              /     
+              /
          ugml - ebii
-       /      \     
+       /      \
       |         jptl
-      |        
+      |
       |         pbga
      /        /
 tknk --- padx - havc
      \        \
       |         qoyq
-      |             
+      |
       |         ktlj
-       \      /     
+       \      /
          fwft - cntj
-              \     
+              \
                 xhth
 In this example,
 tknk

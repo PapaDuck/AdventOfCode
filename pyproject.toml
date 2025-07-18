@@ -13,5 +13,21 @@ python-dotenv = "^1.0.1"
 
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[project]
+authors = [
+    {name = "Felix Krause"},
+]
+requires-python = "<4.0,>=3.11"
+dependencies = [
+    "requests<3.0.0,>=2.32.3",
+    "beautifulsoup4<5.0.0,>=4.12.3",
+    "python-dotenv<2.0.0,>=1.0.1",
+]
+name = "adventofcode"
+version = "0.1.0"
+description = ""
+readme = "README.md"

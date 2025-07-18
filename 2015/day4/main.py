@@ -1,13 +1,13 @@
 import hashlib
 
 # encoding GeeksforGeeks using md5 hash
-# function 
+# function
 
 def day4(anzahl_nullen):
     """Tag 4 des Jahres 2015"""
     with open('./input.txt') as input_file:
         input = input_file.read()
-    
+
     number = 0
     input = 'ckczppom'
     result = True

@@ -53,14 +53,14 @@ To make the droid go north, send it
 .** If it replies with
 0
 , you know that location is a wall and that the droid didn't move: **
-#  
+#
    D
 To move east, send
 4
 ; a reply of
 1
 means the movement was successful: **
-#  
+#
    .**D
 Then, perhaps attempts to move north (
 1
@@ -71,7 +71,7 @@ Then, perhaps attempts to move north (
 ) are all met with replies of
 0
 : **
-## 
+##
    .**D#
     #
 Now, you know the repair droid is in a dead end.** Backtrack with
@@ -79,7 +79,7 @@ Now, you know the repair droid is in a dead end.** Backtrack with
 (which you already know will get a reply of
 1
 because you already know that location is open): **
-## 
+##
    D.**#
     #
 Then, perhaps west (
@@ -99,9 +99,9 @@ Then, perhaps west (
 ) gets a reply of
 2
 : **
-## 
+##
   #.**.**#
-  D.**# 
+  D.**#
    #
 Now, because of the reply of
 2

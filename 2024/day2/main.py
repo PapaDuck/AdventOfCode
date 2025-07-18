@@ -20,42 +20,44 @@ def day2():
     for report in reports:
         level = report.split(' ')
         level = [ int(x) for x in level ]
-        
-        errors = 0
+
         safe = True
-        
-        #for i in len(level):
+
+        # TOL LEVEL
+        level_bu = level.copy()
+        for i in range(len(level)-tolarate_lvl):
+            level = level_bu.copy()
+            if tolarate_lvl != 0:
+                print('vor', level)
+                del level[i]
+                print('nach', level)
 
 
-        differences = [j-i for i, j in zip(level[:-1], level[1:])]
+            differences = [j-i for i, j in zip(level[:-1], level[1:])]
 
-        # Auf oder Absteigend
-        pos = [i for i in differences if i > 0]
-        neg = [i for i in differences if i < 0]
-        if len(pos) != 0 and len(neg) != 0:
-            safe = False
-            print('pos or neg')
-        
-        # In Range
-        for dif in differences:
-            if dif < 0:
-                dif = dif*-1
-            if dif < min_difference or dif > max_difference:
+            # Auf oder Absteigend
+            pos = [i for i in differences if i > 0]
+            neg = [i for i in differences if i < 0]
+            if len(pos) != 0 and len(neg) != 0:
                 safe = False
-                print(f'{dif} | {min_difference}-{max_difference}')
-                break
-        
-        # Reihenfolge
-        for i, lev in enumerate(level):
-            if i > 0:
-                if (level[i] > level[i-1] and len(neg) != 0):
+
+            # In Range
+            for dif in differences:
+                if dif < 0:
+                    dif = dif*-1
+                if dif < min_difference or dif > max_difference:
                     safe = False
-                    print(f'{lev} F | {level[i]} != {level[i-1]}')
-                if (level[i] < level[i-1] and len(pos) != 0):
-                    safe = False
-                    print(f'{lev} F | {level[i]} != {level[i-1]}')
-        print(level, safe)
-        report_list.append(safe)
+
+            # Reihenfolge
+            for i, lev in enumerate(level):
+                if i > 0:
+                    if (level[i] > level[i-1] and len(neg) != 0):
+                        safe = False
+                    if (level[i] < level[i-1] and len(pos) != 0):
+                        safe = False
+            print(level, safe)
+            report_list.append(safe)
+
     print('----------=== ',report_list.count(True))
     return
 

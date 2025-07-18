@@ -50,20 +50,20 @@ times, while the second Elf moves forward
 times.** If they run out of recipes, they loop back around to the beginning.** After the first round, both Elves happen to loop around until they land on the same recipe that they had in the beginning; in general, they will move to different recipes.**
 Drawing the first Elf as parentheses and the second Elf as square brackets, they continue this process: **
 (3)[7]
-(3)[7] 1  0 
- 3  7  1 [0](1) 0 
+(3)[7] 1  0
+ 3  7  1 [0](1) 0
  3  7  1  0 [1] 0 (1)
-(3) 7  1  0  1  0 [1] 2 
+(3) 7  1  0  1  0 [1] 2
  3  7  1  0 (1) 0  1  2 [4]
- 3  7  1 [0] 1  0 (1) 2  4  5 
- 3  7  1  0 [1] 0  1  2 (4) 5  1 
- 3 (7) 1  0  1  0 [1] 2  4  5  1  5 
- 3  7  1  0  1  0  1  2 [4](5) 1  5  8 
+ 3  7  1 [0] 1  0 (1) 2  4  5
+ 3  7  1  0 [1] 0  1  2 (4) 5  1
+ 3 (7) 1  0  1  0 [1] 2  4  5  1  5
+ 3  7  1  0  1  0  1  2 [4](5) 1  5  8
  3 (7) 1  0  1  0  1  2  4  5  1  5  8 [9]
- 3  7  1  0  1  0  1 [2] 4 (5) 1  5  8  9  1  6 
- 3  7  1  0  1  0  1  2  4  5 [1] 5  8  9  1 (6) 7 
- 3  7  1  0 (1) 0  1  2  4  5  1  5 [8] 9  1  6  7  7 
- 3  7 [1] 0  1  0 (1) 2  4  5  1  5  8  9  1  6  7  7  9 
+ 3  7  1  0  1  0  1 [2] 4 (5) 1  5  8  9  1  6
+ 3  7  1  0  1  0  1  2  4  5 [1] 5  8  9  1 (6) 7
+ 3  7  1  0 (1) 0  1  2  4  5  1  5 [8] 9  1  6  7  7
+ 3  7 [1] 0  1  0 (1) 2  4  5  1  5  8  9  1  6  7  7  9
  3  7  1  0 [1] 0  1  2 (4)
 5  1  5  8  9  1  6  7  7  9
 2

@@ -3,7 +3,7 @@ def day1():
     with open('./input.txt') as input_file:
         location_ids = input_file.read()
 
-    
+
     left_list = []
     right_list = []
     distances = []
@@ -42,6 +42,6 @@ def day1():
     return
 def main():
     day1()
-    
+
 if __name__ == "__main__":
     main()

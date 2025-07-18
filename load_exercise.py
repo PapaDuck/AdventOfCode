@@ -18,16 +18,16 @@ def fetch_puzzle(year, day):
     """
     url = f"{BASE_URL}/{year}/day/{day}"
     response = requests.get(url)
-    
+
     if response.status_code != 200:
         raise Exception(f"Fehler beim Laden der Aufgabe: {response.status_code}")
-    
+
     soup = BeautifulSoup(response.text, "html.parser")
     article = soup.find("article", class_="day-desc")
-    
+
     if not article:
         raise Exception("Die Aufgabe konnte nicht gefunden werden.")
-    
+
     # Extrahiere den reinen Text und entferne unnötige Leerzeichen
     content = article.get_text(separator="\n", strip=True)
     return convert_to_markdown(content)
@@ -39,10 +39,10 @@ def fetch_input(year, day):
     url = f"{BASE_URL}/{year}/day/{day}/input"
     headers = {"Cookie": f"session={SESSION_COOKIE}"}
     response = requests.get(url, headers=headers)
-    
+
     if response.status_code != 200:
         raise Exception(f"Fehler beim Laden der Eingabedatei: {response.status_code}")
-    
+
     return response.text
 
 def convert_to_markdown(content):
@@ -100,7 +100,7 @@ def main():
     except Exception as e:
         print(f"Fehler: {e}")
     print('\n')
-                
+
 
 if __name__ == "__main__":
     main()

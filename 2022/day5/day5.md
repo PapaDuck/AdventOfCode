@@ -11,10 +11,10 @@ crate will end up where, and they want to be ready to unload them as soon as pos
 They do, however, have a drawing of the starting stacks of crates
 and
 the rearrangement procedure (your puzzle input).** For example: **
-[D]    
-[N] [C]    
+[D]
+[N] [C]
 [Z] [M] [P]
- 1   2   3 
+ 1   2   3
 
 move 1 from 2 to 1
 move 3 from 1 to 3
@@ -34,8 +34,8 @@ D
 P
 .**
 Then, the rearrangement procedure is given.** In each step of the procedure, a quantity of crates is moved from one stack to a different stack.** In the first step of the above rearrangement procedure, one crate is moved from stack 2 to stack 1, resulting in this configuration: **
-[D]        
-[N] [C]    
+[D]
+[N] [C]
 [Z] [M] [P]
  1   2   3
 In the second step, three crates are moved from stack 1 to stack 3.** Crates are moved

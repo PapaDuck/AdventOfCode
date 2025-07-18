@@ -13,7 +13,7 @@ V
 #-#-#-#-#
 # | | | #
 #-#-#-#-#
-# | | |  
+# | | |
 ####### V
 Fixed walls are marked with
 #

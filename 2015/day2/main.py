@@ -2,7 +2,7 @@ def day2():
     """Tag 2 des Jahres 2015"""
     with open('./input.txt') as input_file:
         wrapping_paper = input_file.read()
-    
+
     presents = wrapping_paper.split('\n')[:-1]
 
     sum_area = 0

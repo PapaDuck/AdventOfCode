@@ -14,7 +14,7 @@ def prep_data(rules, page_updates):
         from_page = int(from_page)
         to_page = int(to_page)
         rules_list.append([from_page, to_page])
-    
+
     page_updates_list = []
     for pages in page_updates:
         pages = pages.split(',')

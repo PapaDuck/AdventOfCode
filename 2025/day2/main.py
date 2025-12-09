@@ -12,14 +12,24 @@ def splitFile(data: str) -> list:
     id_range = data[0].split(',')
     return id_range
 
+def test_id(id: int) -> bool:
+    id_string = str(id)
+    if len(id_string) % 2 == 0:
+        if id_string[:int(len(id_string)/2)] == id_string[int(len(id_string)/2):]:
+            return True
 
 def day2():
+    id_sum = 0
     data = load_data(testing)
-    data = splitFile(data)#
-
-    for 
-    print(data)
-    # TODO: Implementiere die Lösung hier
+    id_ranges = splitFile(data)
+    for id_range in id_ranges:
+        id_start, id_end = id_range.split('-')
+        id_start = int(id_start)
+        id_end = int(id_end)
+        for id in range(id_start, id_end+1):
+            if test_id(id):
+                id_sum += id
+    return id_sum
 
 
 def main():

@@ -6,12 +6,26 @@ def load_data(test_file=False):
         data = input_file.read()
     return data.splitlines()
 
+def high_battery(bank: str) -> int:
+    highest_battery = 0
+    for pos_one, battery_one in enumerate(bank[:-1]):
+        for pos_two, battery_two in enumerate(bank[1:]):
+            if pos_one-1 == pos_two or pos_one-1>=pos_two:
+                continue
+            battery = int(battery_one+battery_two)
+            if battery > highest_battery:
+                highest_battery = battery
+    return highest_battery
+
 
 def day3():
+    sum_battery = 0
     data = load_data(testing)
-    print(data)
-    # TODO: Implementiere die Lösung hier
-
+    for bank in data:
+        print(bank)
+        win = high_battery(bank)
+        sum_battery += win
+    return sum_battery
 
 def main():
     result = day3()
